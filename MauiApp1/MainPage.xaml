@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             x:Class="MauiApp1.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="30" Spacing="25" VerticalOptions="Center">
+
+            <Label Text="Prueba de velocidad"
+                   Style="{StaticResource Headline}"
+                   HorizontalOptions="Center"
+                   HorizontalTextAlignment="Center" />
+
+            <Label x:Name="EstadoLabel"
+                   Text="Presiona el botón muy rápido para llenar la barra"
+                   Style="{StaticResource SubHeadline}"
+                   HorizontalOptions="Center"
+                   HorizontalTextAlignment="Center" />
+
+            <!-- Barra de sensibilidad -->
+            <ProgressBar x:Name="BarraSensibilidad"
+                         Progress="0.0"
+                         ProgressColor="#512BD4"
+                         HeightRequest="20"
+                         HorizontalOptions="Fill" />
+
+            <!-- Botón principal para medir velocidad -->
+            <Button x:Name="BotonSensibilidad"
+                    Text="¡Presióname rápido!"
+                    Clicked="OnBotonSensibilidadClicked"
+                    HeightRequest="60"
+                    FontSize="18"
+                    HorizontalOptions="Fill" />
+
+            <!-- Botón para reiniciar la prueba -->
+            <Button x:Name="ResetBtn"
+                    Text="Reiniciar"
+                    Clicked="OnResetClicked"
+                    BackgroundColor="#E74C3C"
+                    TextColor="White"
+                    HorizontalOptions="Fill" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
